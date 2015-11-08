@@ -116,7 +116,12 @@ public abstract class ResponseHandlerBase implements ResponseHandler{
             boolean connection = name.equalsIgnoreCase("connection");
             
             if (!contentLength && !connection) {
-                response.addHeader(name, header.getValue());
+            	// content type needs to be set explicitly
+            	if (name.equals("Content-Type")) {
+            		response.setContentType(header.getValue());
+            	} else {
+            		response.addHeader(name, header.getValue());
+            	}
             } 
         }
         

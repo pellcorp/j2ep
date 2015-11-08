@@ -55,7 +55,7 @@ public abstract class RequestHandlerBase implements RequestHandler {
     /** 
      * Logging element supplied by commons-logging.
      */
-    private static Log log = LogFactory.getLog(RequestHandlerBase.class);
+    private final Log log = LogFactory.getLog(getClass());
     
     /**
      * Will write all request headers stored in the request to the method that

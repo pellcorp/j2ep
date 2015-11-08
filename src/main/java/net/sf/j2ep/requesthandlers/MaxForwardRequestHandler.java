@@ -88,7 +88,6 @@ public class MaxForwardRequestHandler extends RequestHandlerBase {
             while (value.hasMoreElements()) {
                 method.addRequestHeader(name, (String) value.nextElement());
             }
-
         } 
     }
 }

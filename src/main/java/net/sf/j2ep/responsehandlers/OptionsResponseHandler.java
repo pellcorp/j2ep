@@ -40,7 +40,7 @@ public class OptionsResponseHandler extends ResponseHandlerBase {
     /** 
      * The logger.
      */
-    private static Log log = LogFactory.getLog(OptionsResponseHandler.class);
+	private final Log log = LogFactory.getLog(getClass());
     
     /** 
      * Set a construction to indicate if the request is directed to the

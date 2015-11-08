@@ -45,7 +45,7 @@ public class ConfigParser {
     /**
      * A logging instance supplied by commons-logging.
      */
-    private static Log log;
+    private final Log log = LogFactory.getLog(getClass());
 
     /**
      * Standard constructor only specifying the input file. The constructor will
@@ -55,7 +55,6 @@ public class ConfigParser {
      * @param data The config file containing the XML data structure
      */
     public ConfigParser(File data) {
-        log = LogFactory.getLog(ConfigParser.class);
         try {
             LinkedList serverContainer = createServerList(data);
             if (log.isDebugEnabled()) {

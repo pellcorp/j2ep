@@ -65,7 +65,7 @@ public class ServerStatusChecker extends Thread {
     /** 
      * Logging element supplied by commons-logging.
      */
-    private static Log log = LogFactory.getLog(ServerStatusChecker.class);
+    private final Log log = LogFactory.getLog(getClass());
     
     /**
      * Basic constructor sets the listener to notify when

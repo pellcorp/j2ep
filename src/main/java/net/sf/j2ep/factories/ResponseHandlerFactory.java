@@ -72,7 +72,4 @@ public class ResponseHandlerFactory {
 
         return handler;
     }
-
-
-
 }

@@ -41,7 +41,7 @@ public class ClusterResponseWrapper extends HttpServletResponseWrapper {
     /** 
      * Logging element supplied by commons-logging.
      */
-    private static Log log = LogFactory.getLog(ClusterResponseWrapper.class);
+    private final Log log = LogFactory.getLog(getClass());
     
     /** 
      * Regex to find sessions in cookies.

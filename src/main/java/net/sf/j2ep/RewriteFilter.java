@@ -81,8 +81,8 @@ public class RewriteFilter implements Filter {
                 httpRequest.setAttribute("proxyServer", server);
                 
                 String ownHostName = request.getServerName() + ":" + request.getServerPort();
-                UrlRewritingResponseWrapper wrappedResponse;
-                wrappedResponse = new UrlRewritingResponseWrapper(httpResponse, server, ownHostName, httpRequest.getContextPath(), serverChain);
+                UrlRewritingResponseWrapper wrappedResponse = new UrlRewritingResponseWrapper(
+                		httpResponse, server, ownHostName, httpRequest.getContextPath(), serverChain);
                 
                 filterChain.doFilter(httpRequest, wrappedResponse);
 

@@ -70,7 +70,7 @@ public final class UrlRewritingOutputStream extends ServletOutputStream {
     /** 
      * Logging element supplied by commons-logging.
      */
-    private static Log log;
+    private final Log log = LogFactory.getLog(getClass());
     
     /**
      * Basic constructor.
@@ -82,7 +82,6 @@ public final class UrlRewritingOutputStream extends ServletOutputStream {
         this.ownHostName = ownHostName;
         this.contextPath = contextPath;
         this.serverChain = serverChain;
-        log = LogFactory.getLog(UrlRewritingOutputStream.class);  
         
         stream = new ByteArrayOutputStream();
     }
@@ -223,5 +222,4 @@ public final class UrlRewritingOutputStream extends ServletOutputStream {
     public void close() throws IOException {
         stream.close();
     }
-
 }

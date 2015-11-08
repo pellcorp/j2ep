@@ -91,7 +91,7 @@ public final class UrlRewritingResponseWrapper extends HttpServletResponseWrappe
     /** 
      * Logging element supplied by commons-logging.
      */
-    private static Log log;
+    private final  Log log = LogFactory.getLog(getClass());
     
     /**
      * Basic constructor.
@@ -108,7 +108,6 @@ public final class UrlRewritingResponseWrapper extends HttpServletResponseWrappe
         this.contextPath = contextPath;
         this.serverChain = serverChain;
         
-        log = LogFactory.getLog(UrlRewritingResponseWrapper.class);        
         outStream = new UrlRewritingOutputStream(response.getOutputStream(), ownHostName, contextPath, serverChain);
         outWriter = new PrintWriter(outStream);
         originalWriter = new PrintWriter(response.getOutputStream());

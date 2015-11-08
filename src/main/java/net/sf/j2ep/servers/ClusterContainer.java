@@ -42,7 +42,7 @@ public abstract class ClusterContainer extends ServerContainerBase implements Se
     /** 
      * Logging element supplied by commons-logging.
      */
-    private static Log log;
+	private final Log log = LogFactory.getLog(getClass());
     
     /** 
      * The servers in our cluster,
@@ -61,7 +61,6 @@ public abstract class ClusterContainer extends ServerContainerBase implements Se
         servers = new HashMap();
         statusChecker = new ServerStatusChecker(this, 5*60*1000);
         statusChecker.start();
-        log = LogFactory.getLog(ClusterContainer.class);
     }
     
     /**

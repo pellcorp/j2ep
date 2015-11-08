@@ -33,7 +33,6 @@ import org.apache.commons.httpclient.methods.PutMethod;
  * @author Anders Nyman
  */
 public class EntityEnclosingRequestHandler extends RequestHandlerBase {
-
     /**
      * Will set the input stream and the Content-Type header to match this request.
      * Will also set the other headers send in the request.
@@ -42,7 +41,6 @@ public class EntityEnclosingRequestHandler extends RequestHandlerBase {
      * @see net.sf.j2ep.model.RequestHandler#process(javax.servlet.http.HttpServletRequest, java.lang.String)
      */
     public HttpMethod process(HttpServletRequest request, String url) throws IOException {
-        
         EntityEnclosingMethod method = null;
         
         if (request.getMethod().equalsIgnoreCase("POST")) {
@@ -61,6 +59,4 @@ public class EntityEnclosingRequestHandler extends RequestHandlerBase {
         return method;
         
     }
-        
-
 }
