@@ -67,14 +67,13 @@ public class RewriteRule extends BaseRule {
     /** 
      * Logging element supplied by commons-logging.
      */
-    private static Log log;
+    private Log log = LogFactory.getLog(getClass());
     
     /**
      * Basic constructor.
      */
     public RewriteRule() {
         isRewriting = false;
-        log = LogFactory.getLog(RewriteRule.class);
     }
 
     /**

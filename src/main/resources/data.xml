@@ -2,6 +2,12 @@
 <config>
 	<server className="net.sf.j2ep.servers.BaseServer" domainName="www.kidzsearch.com" isRewriting="true">
 		<rule className="net.sf.j2ep.rules.DirectoryRule" directory="/kidzsearch" />
+		<!-- <rule className="net.sf.j2ep.rules.RewriteRule" from="http://www.youtube.com/watch?v=([a-zA-Z0-9]+)" to="/youtube/watch?v=$1" />
+		 -->
+	</server>
+	
+	<server className="net.sf.j2ep.servers.BaseServer" domainName="www.youtube.com" isRewriting="true">
+		<rule className="net.sf.j2ep.rules.DirectoryRule" directory="/youtube" />
 	</server>
 	
 </config>
